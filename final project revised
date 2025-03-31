@@ -1,0 +1,94 @@
+My project will analyze crime trends in Chicago using publicly available crime data. My goal is to explore patterns in crime based on time, location, and type of crime. The project will provide statistical insights and visual representations to help understand crime trends in different areas. This analysis can aid law enforcement agencies, policymakers, and community organizers in developing targeted interventions and safety measures.
+
+Sales Pitch:
+
+By examining crime trends in Chicago, this project aims to uncover meaningful insights that can enhance community safety and improve resource allocation. Through data-driven analysis, we can identify hotspots, detect seasonal crime patterns, and understand correlations between crime types and specific locations. This tool will assist in proactive decision-making and foster more efficient community policing strategies.
+
+Case Examples:
+
+Example 1: Seasonal Crime Spike
+
+The project can detect if there is an increase in certain types of crimes (like theft or burglary) during specific seasons or holidays, such as a spike in theft during the winter holidays. This can help allocate resources more efficiently during peak times.
+
+Example 2: Geographic Crime Clustering
+
+By mapping crime data, the project might reveal clusters of violent crimes in particular neighborhoods, allowing for targeted community outreach or increased police presence.
+
+Data Preprocessing and Cleaning (clean_data(filepath))
+
+Parameters:
+
+filepath (string): The path to the raw crime data file.
+
+Functionality:
+
+Reads the data file (CSV format).
+
+Removes duplicates and handles missing values.
+
+Converts date and time fields into standardized formats.
+
+Returns a cleaned DataFrame.
+
+Example Use Case:
+
+python
+Copy
+Edit
+cleaned_df = clean_data("chicago_crime_data.csv")
+Crime Trend Analysis (analyze_trends(data, crime_type, time_period))
+
+Parameters:
+
+data (DataFrame): The cleaned crime data.
+
+crime_type (string): Specific crime type to analyze (e.g., "robbery").
+
+time_period (string): Time aggregation level (e.g., "monthly", "yearly").
+
+Functionality:
+
+Aggregates crime counts based on the specified time period.
+
+Analyzes the frequency of the specified crime type.
+
+Returns a statistical summary and visual plot.
+
+Example Use Case:analyze_trends(cleaned_df, "robbery", "monthly")
+Crime Mapping (plot_crime_map(data, area))
+
+Parameters:
+
+data (DataFrame): The cleaned crime data.
+
+area (string): The geographical area to map (e.g., "South Side").
+
+Functionality:
+
+Plots a heatmap of crime incidents within the specified area.
+
+Provides markers indicating the most frequent crime spots.
+
+Example Use Case:plot_crime_map(cleaned_df, "South Side")
+ormat: CSV file
+
+Field Names:
+
+Date (string, format: "MM/DD/YYYY")
+
+Time (string, format: "HH:MM:SS AM/PM")
+
+Location Description (string, e.g., "Street", "Alley")
+
+Primary Type (string, e.g., "THEFT", "BATTERY")
+
+Description (string, a brief description of the crime)
+
+Latitude (float)
+
+Longitude (float)
+
+Field Order: The fields must be in the specified order.
+
+Variable Names: Must be included as headers in the first row of the CSV file.
+

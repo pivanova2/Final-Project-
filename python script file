@@ -1,0 +1,62 @@
+## Documentation File
+
+### Project Overview
+This project analyzes crime trends in Chicago using publicly available crime data. The main goal is to identify patterns in crime based on time, location, and crime type. The project will provide statistical insights and visual representations to help understand crime trends in various areas. 
+
+### Core Functions
+1. **load_and_clean_data(file_path)**
+   - Loads the Chicago crime dataset from a CSV file.
+   - Cleans missing data and formats the date column for better analysis.
+
+2. **generate_statistics(df)**
+   - Computes crime trends, including total crimes per year and crime types.
+   - Displays crime distribution over time.
+
+3. **visualize_data(df)**
+   - Generates visualizations (graphs and charts) to display crime patterns.
+   - Uses matplotlib and seaborn for data visualization.
+
+### Example Use Cases
+- Analyzing the frequency of specific crime types by year.
+- Visualizing the distribution of crime incidents across different neighborhoods.
+- Identifying patterns in crime occurrence by month or season.
+
+### Data Format
+- Input: CSV file with crime data
+- Required Fields:
+  - Date: String in the format 'YYYY-MM-DD'
+  - Crime Type: String (e.g., 'THEFT', 'BATTERY')
+  - Location: String indicating the area or neighborhood
+
+
+## Python Script File
+
+### Function 1: load_and_clean_data(file_path)
+- Parameters: file_path (string) - path to the CSV file
+- Returns: pandas DataFrame after cleaning and formatting
+- Description: Reads the file, drops missing data, and formats the date column.
+
+### Function 2: generate_statistics(df)
+- Parameters: df (DataFrame) - cleaned crime data
+- Returns: Dictionary with statistics
+- Description: Computes total crimes per year and crime type frequency.
+
+### Function 3: visualize_data(df)
+- Parameters: df (DataFrame) - cleaned crime data
+- Returns: None (displays graphs)
+- Description: Plots crime trends using matplotlib and seaborn.
+
+
+## Test File
+
+### Test 1: Data Loading and Cleaning
+- Run the function load_and_clean_data with a sample CSV file.
+- Verify that the output DataFrame has no missing values and correctly formatted date.
+
+### Test 2: Statistical Generation
+- Run generate_statistics with the cleaned DataFrame.
+- Check if the output dictionary has valid counts and accurate yearly trends.
+
+### Test 3: Data Visualization
+- Run visualize_data with the cleaned DataFrame.
+- Visually inspect the output graphs for accuracy and relevance. 

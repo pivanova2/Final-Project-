@@ -1,0 +1,26 @@
+Data File: Use the example file chicago_crime_data.csv, which contains simulated crime data for Chicago. This file should be formatted according to the input data requirements outlined previously.
+
+The file should include columns: Date, Time, Location Description, Primary Type, Description, Latitude, Longitude.
+
+Environment:
+
+Make sure you have the necessary Python libraries installed:
+
+pandas for data manipulation
+
+matplotlib for plotting
+
+folium for mapping (if required)
+ Data Ingestion and Cleaning
+
+Run the following command to load and clean the data:cleaned_df = clean_data("chicago_crime_data.csv")
+Expected Output:
+
+A DataFrame with cleaned data, no duplicates, standardized date and time formats, and no missing values.
+
+Analyze trends for a specific crime type (e.g., "THEFT") on a monthly basis:
+
+python
+Copy
+Edit
+analyze_trends(cleaned_df, "THEFT", "monthly")
